@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Контакты — Марта Левина, керамика</title>
+<meta name="description" content="Как записаться на занятие или заказать работу: почта, телефон, адрес мастерской.">
+<meta name="theme-color" content="#dce5df">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400..700&family=Unbounded:wght@400..600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">К содержимому</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="img/favicon.svg" alt="" width="34" height="34">Марта Левина</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Меню</button>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="index.html">Главная</a>
+      <a href="about.html">Обо мне</a>
+      <a href="works.html">Работы</a>
+      <a href="workshops.html">Мастер-классы</a>
+      <a href="contacts.html" aria-current="page">Контакты</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-head">
+  <div class="wrap">
+    <h1>Контакты</h1>
+    <p>Пишите, если хотите записаться, заказать работу или просто спросить.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:1rem">
+  <div class="wrap contact-grid">
+    <div>
+      <ul class="contact-list">
+        <li><small>Почта</small><a href="mailto:hello@example.com">hello@example.com</a></li>
+        <li><small>Телефон</small><a href="tel:+79000000000">+7 900 000-00-00</a></li>
+        <li><small>Мастерская</small><span class="v">ул. Примерная, 12, вход со двора</span></li>
+        <li><small>Часы работы</small><span class="v">Вт–Сб, 11:00–19:00</span></li>
+      </ul>
+      <p>Отвечаю в течение дня. Если не успела, значит, руки в глине.</p>
+    </div>
+
+    <form class="card" id="contact-form" data-to="hello@example.com" novalidate>
+      <div class="field">
+        <label for="name">Как вас зовут</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+        <div class="err">Напишите имя, хотя бы два символа.</div>
+      </div>
+      <div class="field">
+        <label for="email">Почта для ответа</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+        <div class="err">Проверьте адрес: он должен выглядеть как name@example.com.</div>
+      </div>
+      <div class="field">
+        <label for="topic">О чём вы хотите написать</label>
+        <select id="topic" name="topic">
+          <option value="workshop">Запись на мастер-класс</option>
+          <option value="order">Заказ работы</option>
+          <option value="question">Вопрос</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="message">Сообщение</label>
+        <textarea id="message" name="message" required></textarea>
+        <div class="err">Напишите хотя бы пару предложений, минимум 10 символов.</div>
+      </div>
+      <button class="btn" type="submit">Подготовить письмо</button>
+      <p class="sent" role="status">Открываю почтовую программу. Осталось нажать «Отправить».</p>
+      <p class="form-note">Кнопка откроет письмо в вашей почтовой программе с уже заполненным текстом.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© <span class="js-year">2026</span> Марта Левина, керамика</span>
+    <a href="mailto:hello@example.com">hello@example.com</a>
+  </div>
+</footer>
+<script src="js/main.js" defer></script>
+</body>
+</html>

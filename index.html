@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Марта Левина — керамика ручной работы</title>
+<meta name="description" content="Вазы, чаши и тарелки ручной работы. Мастер-классы по гончарному кругу и ручной лепке.">
+<meta name="theme-color" content="#dce5df">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400..700&family=Unbounded:wght@400..600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">К содержимому</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="img/favicon.svg" alt="" width="34" height="34">Марта Левина</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Меню</button>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="index.html" aria-current="page">Главная</a>
+      <a href="about.html">Обо мне</a>
+      <a href="works.html">Работы</a>
+      <a href="workshops.html">Мастер-классы</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Керамика для каждого дня</h1>
+      <p class="lead">Вазы, чаши и тарелки из шамотной глины. Делаю на гончарном круге в маленькой мастерской и учу этому других.</p>
+      <div class="btn-row">
+        <a class="btn" href="works.html">Смотреть работы</a>
+        <a class="btn ghost" href="workshops.html">Записаться на занятие</a>
+      </div>
+    </div>
+    <div class="hero-stage" id="hero-stage">
+      <svg viewBox="0 0 500 560" role="img" aria-label="Ваза на гончарном круге. Форма меняется, если провести по ней мышью.">
+        <defs>
+          <linearGradient id="glaze-g" x1="0" x2="1">
+            <stop offset="0" stop-color="#16256f"/>
+            <stop offset=".34" stop-color="#4a6af0"/>
+            <stop offset=".62" stop-color="#2a47c9"/>
+            <stop offset="1" stop-color="#101a55"/>
+          </linearGradient>
+        </defs>
+        <ellipse cx="250" cy="506" rx="190" ry="26" fill="#15213b" opacity=".13"/>
+        <path d="M190 478h120l14 28H176z" fill="#46536f"/>
+        <ellipse cx="250" cy="470" rx="156" ry="28" fill="#566a8f"/>
+        <ellipse cx="250" cy="463" rx="156" ry="28" fill="#8ea0c2"/>
+        <ellipse class="wheel-ring" cx="250" cy="463" rx="134" ry="22" fill="none" stroke="#f4f6f2" stroke-width="3" stroke-dasharray="14 16"/>
+        <g id="vase">
+          <path id="vase-body" fill="url(#glaze-g)"/>
+          <g id="vase-bands"></g>
+          <g id="vase-ribs"></g>
+          <ellipse id="lip-outer" fill="#4a6af0"/>
+          <ellipse id="lip-inner" fill="#0d1647"/>
+        </g>
+      </svg>
+      <p class="hint">Проведите по вазе: форма изменится</p>
+      <button class="shape-btn" id="shape-btn" type="button">Другая форма</button>
+      <span class="sr-only" id="shape-name" aria-live="polite"></span>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Недавние работы</h2>
+      <a href="works.html">Все работы</a>
+    </div>
+    <div class="strip">
+      <figure class="piece"><a href="works.html"><img src="img/vase-cobalt.svg" alt="Кобальтовая ваза с охристой полосой" width="600" height="600"></a><figcaption><strong>Ваза «Кобальт»</strong>Шамотная глина, глазурь, 1240 °C</figcaption></figure>
+      <figure class="piece"><a href="works.html"><img src="img/bowl-celadon.svg" alt="Чаша цвета селадон" width="600" height="600"></a><figcaption><strong>Чаша «Селадон»</strong>Фарфор, прозрачная глазурь</figcaption></figure>
+      <figure class="piece"><a href="works.html"><img src="img/moon-jar.svg" alt="Лунная банка цвета кости" width="600" height="600"></a><figcaption><strong>Лунная банка</strong>Глина с вкраплениями, матовая глазурь</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Ближайшие занятия</h2>
+      <a href="workshops.html">Все форматы</a>
+    </div>
+    <ul class="dates">
+      <li><span class="when">Сб, 24 октября</span><span>Знакомство с гончарным кругом, 11:00–13:30</span><span class="seats">осталось 3 места</span></li>
+      <li><span class="when">Сб, 7 ноября</span><span>Ручная лепка: кружка с ручкой, 12:00–15:00</span><span class="seats">осталось 6 мест</span></li>
+      <li><span class="when">Сб, 21 ноября</span><span>Знакомство с гончарным кругом, 11:00–13:30</span><span class="seats">осталось 8 мест</span></li>
+    </ul>
+    <div class="btn-row"><a class="btn" href="contacts.html?work=занятие">Записаться</a></div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© <span class="js-year">2026</span> Марта Левина, керамика</span>
+    <a href="mailto:hello@example.com">hello@example.com</a>
+  </div>
+</footer>
+<script src="js/main.js" defer></script>
+</body>
+</html>
