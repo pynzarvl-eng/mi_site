@@ -1,0 +1,547 @@
+(()=>{"use strict";(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,780934,e=>{var t=e.i(843476),r=e.i(106032),n=e.i(638346),a=e.i(271645);function o(e,t){if("function"==typeof e)return e(t);"object"==typeof e&&null!==e&&"current"in e&&(e.current=t)}var s=e.i(207670),l=e.i(557936),l=l,i=e.i(433979),i=i,c=e.i(732446),c=c,d=e.i(698875),u=e.i(744660),h=e.i(747500),p=e.i(656464),f=e.i(187205);function m(e,t){return"held"in e&&e.held.id===t?{phase:"preparing"===e.phase?"loading":"shown",current:e.current}:e}var g=e.i(208319),y=e.i(28016);let b=({name:e})=>"first-contentful-paint"===e;function w(e,t){try{let r=e.contentWindow?.performance,n=(t??r?.getEntriesByType("paint"))?.find(b);if(!r||!n)return null;let a=performance.now(),o=n.startTime+(a-r.now());return Number.isFinite(o)?Math.min(o,a):null}catch{return null}}let v="hsl(50 23.1% 94.9%)";function k(e){return e.length<=1e4?e:e.slice(0,1e4).replace(/[\ud800-\udbff]$/,"")+"…"}let E=new WeakSet;function x(){let e=(0,f.Q)();return(0,t.jsx)(d.T,{"aria-label":e.formatMessage(r.f.consoleResize),...e.textProps(r.f.consoleResize),className:"group relative z-10 h-px w-full bg-[hsl(50_5.9%_28%)] outline-none focus-visible:outline-hidden after:absolute after:inset-x-0 after:top-1/2 after:h-3 after:-translate-y-1/2",children:(0,t.jsx)("div",{"aria-hidden":!0,className:"absolute left-1/2 top-1/2 h-[3px] w-full max-w-12 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[hsl(48_4.8%_59.2%)] opacity-0 transition-opacity delay-200 duration-200 group-focus-visible:max-w-none group-focus-visible:bg-[hsl(210_70.9%_51.6%)] group-focus-visible:opacity-100 group-focus-visible:delay-0 group-data-[resize-handle-state=drag]:bg-[hsl(47_8.4%_79%)] group-data-[resize-handle-state=drag]:opacity-100 group-data-[resize-handle-state=drag]:delay-0 group-hover:opacity-100 motion-reduce:transition-none"})})}let M="rgb(128 128 128 / 50%) transparent",R=`<style id="claude-scrollbar">@layer claude-scrollbar{*{scrollbar-width:thin}html{scrollbar-color:${M}}}</style>`;function A(e){let t=e.currentTarget,r=t.contentDocument;t.style.backgroundColor=(r&&(0,n.m)(r))??""}let T=a.forwardRef((e,n)=>{let{content:d,onScreenshot:T,chartTheme:j,hostMessage:I,onRenderTiming:L,padBottomSafeArea:C,holdLastUntil:S=null,onPageBackground:P}=e,O=(0,f.Q)(),[U,F]=(0,a.useState)({dropped:0,lines:[]}),D=(0,a.useRef)(null),N=function(...e){return(0,a.useCallback)(function(...e){let t=new Map;return r=>{if(e.forEach(e=>{let n=o(e,r);n&&t.set(e,n)}),t.size>0)return()=>{e.forEach(e=>{let r=t.get(e);r?r():o(e,null)}),t.clear()}}}(...e),e)}(D,n),q=(0,a.useRef)(null),B=(0,g.d)(d,L),W=(0,y.f)(d,P);(0,a.useEffect)(()=>{let e=D.current,t=()=>{let t=e?.contentDocument;if(!t)return;let r=t.getElementById("claude-chart-theme");if(!j)return void r?.remove();let n=r;n||((n=t.createElement("style")).id="claude-chart-theme",(t.head??t.documentElement).appendChild(n)),n.textContent=`:root {
+${(0,p.F)(j)} }`};return t(),e?.addEventListener("load",t),()=>e?.removeEventListener("load",t)},[j,d]),(0,a.useEffect)(()=>{if(!I)return;let e=D.current,t=()=>{e?.contentWindow?.postMessage({type:"hostMessage",data:I},window.location.origin)};return t(),e?.addEventListener("load",t),()=>e?.removeEventListener("load",t)},[I,d]),(0,a.useEffect)(()=>{let e=D.current?.contentWindow;e&&E.add(e)},[d]),(0,a.useEffect)(()=>{let e=e=>{if(!e.source||!E.has(e.source))return;if(e.source!==D.current?.contentWindow){if(q.current)return;let t=e.data,r=t&&"object"==typeof t?t.type:void 0;if("console"!==r&&"screenshotData"!==r&&"screenshotError"!==r)return}if(e.origin!==window.location.origin)return;let t=(t,r)=>{let n=D.current?.contentWindow;return!!n&&n===e.source&&(n.postMessage(t,window.location.origin,r),!0)},r=e.data;if(r&&"screenshotData"===r.type&&T?.({success:!0,screenshot:r.data,nonce:r.nonce}),r&&"screenshotError"===r.type&&T?.({success:!1,error:r.error,nonce:r.nonce}),r&&"console"===r.type&&null!==r.message&&void 0!==r.message){let e=function(e){try{if("string"==typeof e)return e;if(null===e||"object"!=typeof e)return k(String(e));if(ArrayBuffer.isView(e)&&e.byteLength>1e4)return k(Object.prototype.toString.call(e));let t=1e4,r=JSON.stringify(e,(e,r)=>{if((t-=e.length+1)<0)throw Error("budget");if(ArrayBuffer.isView(r)&&r.byteLength>1e4){let e=k(Object.prototype.toString.call(r));if((t-=e.length+1)<0)throw Error("budget");return e}if("string"==typeof r&&(t-=r.length),t<0)throw Error("budget");return r});return k(r??Object.prototype.toString.call(e))}catch{try{return k(Object.prototype.toString.call(e))}catch{return"[unserializable]"}}}(r.message);""!==e&&F(({dropped:t,lines:r})=>{let n=Math.max(0,r.length+1-500);return{dropped:t+n,lines:[...r.slice(n),e]}})}if(r&&"claudeComplete"===r.type&&window.claude.complete(r.prompt).then(e=>{t({type:"claudeComplete",completion:e,id:r.id})}).catch(e=>{t({type:"claudeComplete",error:e instanceof Error?e.message:String(e),id:r.id})}),r&&"openExternal"===r.type&&window.claude.openExternal(r.href),r&&"downloadFile"===r.type&&window.claude.downloadFile(r),r&&"proxyFetch"===r.type){let{channelId:e}=r;fetch(r.url,r.init).then(async n=>{if(!t({type:"proxyFetchResponse",id:r.id,headers:Object.fromEntries(n.headers.entries()),status:n.status,statusText:n.statusText}))return void await n.body?.cancel();if(n.body&&e){let r=n.body.getReader();try{let n=!1;for(;!n;){let a=await r.read();(n=a.done)?t({type:"proxyFetchStream",channelId:e,done:!0}):a.value&&(t({type:"proxyFetchStream",channelId:e,chunk:a.value.buffer},[a.value.buffer])||(await r.cancel(),n=!0))}}catch(r){t({type:"proxyFetchStream",channelId:e,error:r instanceof Error?r.message:String(r)})}finally{r.releaseLock()}}else!n.body&&e&&t({type:"proxyFetchStream",channelId:e,done:!0})}).catch(e=>{t({type:"proxyFetchResponse",id:r.id,error:e instanceof Error?e.message:String(e)})})}r&&"storageGet"===r.type?window.storage.get(r.key,r.shared).then(e=>{t({type:"storageGet",result:e,id:r.id})}).catch(e=>{t({type:"storageGet",error:e instanceof Error?e.message:String(e),id:r.id})}):r&&"storageSet"===r.type?window.storage.set(r.key,r.value,r.shared).then(e=>{t({type:"storageSet",result:e,id:r.id})}).catch(e=>{t({type:"storageSet",error:e instanceof Error?e.message:String(e),id:r.id})}):r&&"storageDelete"===r.type?window.storage.delete(r.key,r.shared).then(e=>{t({type:"storageDelete",result:e,id:r.id})}).catch(e=>{t({type:"storageDelete",error:e instanceof Error?e.message:String(e),id:r.id})}):r&&"storageList"===r.type&&window.storage.list(r.prefix,r.shared).then(e=>{t({type:"storageList",result:e,id:r.id})}).catch(e=>{t({type:"storageList",error:e instanceof Error?e.message:String(e),id:r.id})})};return window.addEventListener("message",e),()=>window.removeEventListener("message",e)},[T]);let _=`
+    <script>
+      (function() {
+        // Capture host references before any artifact code runs: Window.parent
+        // is [Replaceable] (a top-level \`var parent\` in artifact code would
+        // replace the accessor with a data property), and a top-level
+        // \`const crypto\` would shadow the global — either would otherwise
+        // silently break the bridge for artifacts that worked before.
+        const realParent = window.parent;
+        const cryptoObj = window.crypto;
+        const RealURL = URL;
+        const realDecodeURIComponent = decodeURIComponent;
+        const RealTextEncoder = TextEncoder;
+        const realAtob = atob;
+        // html-to-image is only used by takeScreenshot: fetched on first use, not as a
+        // parser-blocking tag. Native fetch, captured before the proxy override below.
+        const realFetch = typeof window.fetch === 'function' ? window.fetch.bind(window) : null;
+        const HTML_TO_IMAGE_SRC = "https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.11.13/html-to-image.min.js";
+        const HTML_TO_IMAGE_INTEGRITY = "sha512-iZ2ORl595Wx6miw+GuadDet4WQbdSWS3JLMoNfY8cRGoEFy6oT3G9IbcrBeL6AfkgpA51ETt/faX6yLV+/gFJg==";
+        let htmlToImageLoad = null;
+        const loadHtmlToImage = () => {
+          if (!htmlToImageLoad) {
+            htmlToImageLoad = (realFetch
+              ? realFetch(HTML_TO_IMAGE_SRC, { integrity: HTML_TO_IMAGE_INTEGRITY, credentials: 'omit', referrerPolicy: 'no-referrer' })
+              : Promise.reject(new Error('fetch unavailable'))
+            )
+              .then((res) => {
+                if (!res.ok) throw new Error('html-to-image failed to load (' + res.status + ')');
+                return res.text();
+              })
+              .then((source) => {
+                // UMD bundle: hide the artifact's AMD/CommonJS globals so it takes the
+                // window-global branch; inline script text runs synchronously on insert.
+                const hidden = ['define', 'module', 'exports'].map((k) => {
+                  const entry = { k, own: Object.prototype.hasOwnProperty.call(window, k), v: window[k] };
+                  try { window[k] = undefined; } catch (e) {}
+                  return entry;
+                });
+                try {
+                  const el = document.createElement('script');
+                  el.text = source;
+                  (document.head || document.documentElement).appendChild(el);
+                } finally {
+                  hidden.forEach(({ k, own, v }) => {
+                    try { if (own) { window[k] = v; } else { delete window[k]; } } catch (e) {}
+                  });
+                }
+                if (!window.htmlToImage) throw new Error('html-to-image unavailable after load');
+                return window.htmlToImage;
+              });
+            // A failed load may be transient; let the next screenshot retry.
+            htmlToImageLoad.catch(() => { htmlToImageLoad = null; });
+          }
+          return htmlToImageLoad;
+        };
+        // crypto.randomUUID exists only in Secure Contexts; fall back to a
+        // unique non-crypto id elsewhere (http://LAN-IP dev flows) —
+        // uniqueness is what the bridge needs, unpredictability is
+        // defense-in-depth on top of the source guards.
+        const newRequestId =
+          cryptoObj && typeof cryptoObj.randomUUID === "function"
+            ? function () { return cryptoObj.randomUUID(); }
+            : function () { return Date.now() + "-" + Math.random(); };
+
+        // Bridge request ids are crypto-random (not sequential) so they
+        // cannot be predicted by other frames in the tab.
+        let callbacksMap = new Map();
+        let streamControllers = new Map();
+        
+        window.claude = {
+          complete: (prompt) => {
+            return new Promise((resolve, reject) => {
+              const id = newRequestId();
+              callbacksMap.set(id, { resolve, reject });
+              realParent.postMessage({ type: 'claudeComplete', id, prompt }, '*');
+            });
+          }
+        };
+
+        // storage.get and .list calls not yet answered, read by the parent at this frame's 'load' (an answer may restyle the page); counted
+        // here, not there, because WebKit can run this frame's 'load' in the parent before a message posted while parsing has arrived.
+        let storageReadsOut = 0;
+        try { Object.defineProperty(window, '__storageReadsOut', { configurable: true, get: () => storageReadsOut }); } catch (e) {}
+        window.storage = {
+          get: (key, shared = false) => {
+            return new Promise((resolve, reject) => {
+              const id = newRequestId();
+              callbacksMap.set(id, { resolve, reject });
+              realParent.postMessage({ type: 'storageGet', id, key, shared }, '*');
+              storageReadsOut += 1;
+            });
+          },
+          set: (key, value, shared = false) => {
+            return new Promise((resolve, reject) => {
+              const id = newRequestId();
+              callbacksMap.set(id, { resolve, reject });
+              realParent.postMessage({ type: 'storageSet', id, key, value, shared }, '*');
+            });
+          },
+          delete: (key, shared = false) => {
+            return new Promise((resolve, reject) => {
+              const id = newRequestId();
+              callbacksMap.set(id, { resolve, reject });
+              realParent.postMessage({ type: 'storageDelete', id, key, shared }, '*');
+            });
+          },
+          list: (prefix, shared = false) => {
+            return new Promise((resolve, reject) => {
+              const id = newRequestId();
+              callbacksMap.set(id, { resolve, reject });
+              realParent.postMessage({ type: 'storageList', id, prefix, shared }, '*');
+              storageReadsOut += 1;
+            });
+          }
+        };
+
+        let pendingBlobs = new Map();
+        URL.createObjectURL = (blob) => {
+          // Store the blob and create an ID and URL for it
+          const blobId = \`blob-$\{Date.now()}-$\{Math.random()}\`;
+          pendingBlobs.set(blobId, blob);
+          return \`blob-request://$\{blobId}\`;
+        };
+
+        URL.revokeObjectURL = (url) => {
+          // Remove the blob from our store
+          const blobId = url.replace("blob-request://", "");
+          pendingBlobs.delete(blobId);
+        };
+
+        const getBlobFromURL = (url) => {
+          const blobId = url.replace("blob-request://", "");
+          return pendingBlobs.get(blobId);
+        };
+
+        // Override global fetch with streaming support
+        window.fetch = (url, init = {}) => {
+          return new Promise((resolve, reject) => {
+            const id = newRequestId();
+            const channelId = \`fetch-$\{id}-$\{Date.now()}\`;
+            
+            callbacksMap.set(id, { 
+              resolve: (response) => {
+                // Null-body statuses: Response(stream, {status: 204}) throws
+                // per the Fetch spec, which would escape this resolver and
+                // hang the artifact's await forever.
+                if (response.status === 204 || response.status === 205 || response.status === 304) {
+                  try {
+                    resolve(new Response(null, {
+                      status: response.status,
+                      statusText: response.statusText,
+                      headers: response.headers
+                    }));
+                  } catch (err) {
+                    // Invalid statusText/header bytes can throw here too.
+                    reject(new TypeError(
+                      'Bridge fetch: unconstructable response (status ' + response.status + ')'
+                    ));
+                  }
+                  return;
+                }
+                // Create a ReadableStream for the response body
+                const stream = new ReadableStream({
+                  start(controller) {
+                    streamControllers.set(channelId, controller);
+                  },
+                  cancel() {
+                    streamControllers.delete(channelId);
+                  }
+                });
+                
+                // Create and return the Response with the stream. Response()
+                // requires status in [200, 599]; an opaque/no-cors fetch
+                // forwards status 0, which would throw here and escape the
+                // resolver, hanging the artifact's await. Surface it as a
+                // network-error-shaped rejection instead.
+                try {
+                  resolve(new Response(stream, {
+                    status: response.status,
+                    statusText: response.statusText,
+                    headers: response.headers
+                  }));
+                } catch (err) {
+                  streamControllers.delete(channelId);
+                  reject(new TypeError(
+                    'Bridge fetch: unconstructable response (status ' + response.status + ')'
+                  ));
+                }
+              },
+              reject,
+              channelId
+            });
+            
+            realParent.postMessage({
+              type: 'proxyFetch',
+              id,
+              url,
+              init,
+              channelId
+            }, '*');
+          });
+        };
+
+        window.addEventListener('message', async (event) => {
+          // Only the embedding parent may drive the bridge — sibling and
+          // nested frames can also postMessage into this window.
+          if (event.source !== realParent) return;
+          if (event.data.type === 'takeScreenshot') {
+            // Echo the request's nonce so the requester can correlate the
+            // reply to ITS request — a reply without the expected nonce
+            // (e.g. from a stale pre-remount artifact) is ignored upstream.
+            const screenshotNonce = event.data.nonce;
+            const rootElement = document.getElementById('artifacts-component-root-html');
+            if (!rootElement) {
+              realParent.postMessage({
+                type: 'screenshotError',
+                nonce: screenshotNonce,
+                error: new Error('Root element not found'),
+              }, '*');
+              return;
+            }
+            // Catch CDN load failures and toPng errors so the parent always
+            // gets a response instead of hanging forever.
+            try {
+              const htmlToImage = await loadHtmlToImage();
+              const screenshot = await htmlToImage.toPng(rootElement, {
+                imagePlaceholder:
+                  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdjePDgwX8ACOQDoNsk0PMAAAAASUVORK5CYII=",
+              });
+              realParent.postMessage({
+                type: 'screenshotData',
+                nonce: screenshotNonce,
+                data: screenshot,
+              }, '*');
+            } catch (err) {
+              realParent.postMessage({
+                type: 'screenshotError',
+                nonce: screenshotNonce,
+                error: err instanceof Error ? err : new Error(String(err)),
+              }, '*');
+            }
+          } else if (event.data.type === 'claudeComplete') {
+            const callback = callbacksMap.get(event.data.id);
+            if (!callback) return;
+            if (event.data.error) {
+              callback.reject(new Error(event.data.error));
+            } else {
+              callback.resolve(event.data.completion);
+            }
+            callbacksMap.delete(event.data.id);
+          } else if (event.data.type === 'proxyFetchResponse') {
+            const callback = callbacksMap.get(event.data.id);
+            if (!callback) return;
+            if (event.data.error) {
+              callback.reject(new Error(event.data.error));
+              callbacksMap.delete(event.data.id);
+            } else {
+              // Initial response with headers, status, etc.
+              callback.resolve({
+                status: event.data.status,
+                statusText: event.data.statusText,
+                headers: event.data.headers
+              });
+              // Don't delete the callback yet if streaming
+              if (!event.data.body) {
+                callbacksMap.delete(event.data.id);
+              }
+            }
+          } else if (event.data.type === 'proxyFetchStream') {
+            // Handle streaming data chunks
+            const controller = streamControllers.get(event.data.channelId);
+            if (controller) {
+              if (event.data.error) {
+                controller.error(new Error(event.data.error));
+                streamControllers.delete(event.data.channelId);
+              } else if (event.data.done) {
+                controller.close();
+                streamControllers.delete(event.data.channelId);
+                // Clean up the callback
+                const callback = Array.from(callbacksMap.entries()).find(
+                  ([_, value]) => value.channelId === event.data.channelId
+                );
+                if (callback) {
+                  callbacksMap.delete(callback[0]);
+                }
+              } else if (event.data.chunk) {
+                controller.enqueue(new Uint8Array(event.data.chunk));
+              }
+            }
+          } else if (event.data.type === 'storageGet') {
+            const callback = callbacksMap.get(event.data.id);
+            if (!callback) return;
+            storageReadsOut -= 1;
+            if (event.data.error) {
+              callback.reject(new Error(event.data.error));
+            } else {
+              callback.resolve(event.data.result);
+            }
+            callbacksMap.delete(event.data.id);
+          } else if (event.data.type === 'storageSet') {
+            const callback = callbacksMap.get(event.data.id);
+            if (!callback) return;
+            if (event.data.error) {
+              callback.reject(new Error(event.data.error));
+            } else {
+              callback.resolve(event.data.result);
+            }
+            callbacksMap.delete(event.data.id);
+          } else if (event.data.type === 'storageDelete') {
+            const callback = callbacksMap.get(event.data.id);
+            if (!callback) return;
+            if (event.data.error) {
+              callback.reject(new Error(event.data.error));
+            } else {
+              callback.resolve(event.data.result);
+            }
+            callbacksMap.delete(event.data.id);
+          } else if (event.data.type === 'storageList') {
+            const callback = callbacksMap.get(event.data.id);
+            if (!callback) return;
+            storageReadsOut -= 1;
+            if (event.data.error) {
+              callback.reject(new Error(event.data.error));
+            } else {
+              callback.resolve(event.data.result);
+            }
+            callbacksMap.delete(event.data.id);
+          }
+        });
+
+        // An SVG <a> exposes href as an SVGAnimatedString; its baseVal is the attribute
+        // as written, so resolve it against the base URL as the browser does for an HTML <a>.
+        const resolvedHref = (linkEl) => {
+          if (typeof linkEl.href === "string") return linkEl.href;
+          const written = linkEl.href?.baseVal;
+          // A same-document SVG link, such as one that begins an animation, stays with the browser.
+          if (!written || written.trim().startsWith("#")) return "";
+          try {
+            return new RealURL(written, linkEl.baseURI).href;
+          } catch (error) {
+            return written;
+          }
+        };
+
+        // This frame's URL is about:srcdoc, so the browser resolves "#id" against the renderer
+        // page and would load that page in the frame instead of scrolling.
+        const sameDocumentFragment = (linkEl) => {
+          const written = linkEl.getAttribute("href")?.trim();
+          if (!written?.startsWith("#") || document.querySelector("base[href]")) return null;
+          return written.slice(1);
+        };
+
+        const scrollToFragment = (fragment) => {
+          let decoded = fragment;
+          try {
+            decoded = realDecodeURIComponent(fragment);
+          } catch (error) {}
+          let target = document.getElementById(fragment) ?? document.getElementById(decoded);
+          for (const named of target ? [] : document.getElementsByName(decoded)) {
+            if (named.localName === "a") {
+              target = named;
+              break;
+            }
+          }
+          if (target) {
+            target.scrollIntoView();
+          } else if (decoded.toLowerCase() === "top") {
+            window.scrollTo(0, 0);
+          } else {
+            return false;
+          }
+          return true;
+        };
+
+        // Same decoder as dataUrlFile in app/page.tsx; change both together.
+        const hexPair = /^[0-9a-f]{2}$/i;
+        const dataUrlFile = (href) => {
+          const hash = href.indexOf("#");
+          const url = hash === -1 ? href : href.slice(0, hash);
+          const comma = url.indexOf(",");
+          if (comma === -1) return null;
+          const header = url.slice(0, comma);
+          const payload = url.slice(comma + 1);
+          const mimeMatch = header.match(/data:([^;]+)/);
+          const mimeType = mimeMatch ? mimeMatch[1] : "application/octet-stream";
+          const declaredBase64 = header
+            .split(";")
+            .slice(1)
+            .some((param) => param.trim().toLowerCase() === "base64");
+          const type = mimeMatch ? mimeMatch[1].trim().toLowerCase() : "";
+          const binaryType = type !== "" && !type.startsWith("text/");
+          if (declaredBase64 || (binaryType && !payload.includes("%"))) {
+            let binary = null;
+            try {
+              binary = realAtob(
+                payload.replace(/%([0-9a-f]{2})/gi, (_, hex) => String.fromCharCode(parseInt(hex, 16))),
+              );
+            } catch (error) {
+              if (declaredBase64) return null;
+            }
+            if (binary !== null) {
+              const bytes = new Uint8Array(binary.length);
+              for (let i = 0; i < binary.length; i++) {
+                bytes[i] = binary.charCodeAt(i);
+              }
+              return { mimeType, data: bytes.buffer };
+            }
+          }
+          const input = new RealTextEncoder().encode(payload);
+          const bytes = new Uint8Array(input.length);
+          let length = 0;
+          for (let i = 0; i < input.length; i++) {
+            if (input[i] === 0x25 && i + 2 < input.length) {
+              const pair = String.fromCharCode(input[i + 1], input[i + 2]);
+              if (hexPair.test(pair)) {
+                bytes[length++] = parseInt(pair, 16);
+                i += 2;
+                continue;
+              }
+            }
+            bytes[length++] = input[i];
+          }
+          return { mimeType, data: bytes.slice(0, length).buffer };
+        };
+
+        const onLinkClick = (event) => {
+          // Not instanceof Element: an artifact's own top-level class Element shadows the global.
+          if (typeof event.target?.closest !== "function") return;
+    
+          const linkEl = event.target.closest("a");
+          const href = linkEl && resolvedHref(linkEl);
+          if (!href) return;
+
+          const fragment = sameDocumentFragment(linkEl);
+          if (fragment !== null) {
+            const handledByArtifact = event.defaultPrevented;
+            event.preventDefault();
+            if (handledByArtifact || fragment === "" || scrollToFragment(fragment)) return;
+            // A fragment that names nothing in the artifact may name something in the host,
+            // such as a project thread. The artifact's own listeners still see the click.
+            realParent.postMessage({ type: 'openExternal', href }, '*');
+            return;
+          }
+          const filename = linkEl.getAttribute("download") ?? "";
+    
+          event.preventDefault();
+          event.stopImmediatePropagation();
+    
+          if (href.startsWith("blob-request:")) {
+            const blob = getBlobFromURL(href);
+            if (!blob) return;
+            void blob.arrayBuffer().then((data) => {
+              realParent.postMessage({
+                type: "downloadFile",
+                filename,
+                data,
+                mimeType: blob.type || "application/octet-stream",
+              });
+            });
+          } else if (href.startsWith("data:")) {
+            const file = dataUrlFile(href);
+            if (!file) return;
+            realParent.postMessage({
+              type: "downloadFile",
+              filename,
+              data: file.data,
+              mimeType: file.mimeType,
+            });
+          } else {
+            let linkUrl;
+            try {
+              linkUrl = new URL(href);
+            } catch (error) {
+              return;
+            }
+    
+            if (linkUrl.hostname === window.location.hostname) return;
+      
+            realParent.postMessage({
+              type: 'openExternal',
+              href,
+            }, '*');
+          }
+        };
+        window.addEventListener('click', onLinkClick);
+
+        // HACK: a click on an <a download> that is not in the document, or a dispatched click that does not bubble, never reaches the window
+        // listener, so the link gets a listener of its own while its click() or dispatchEvent() runs, after the artifact's. Change with app/page.tsx.
+        const RealAnchor = window.HTMLAnchorElement;
+        const RealMouseEvent = window.MouseEvent;
+        const anchorProto = RealAnchor?.prototype;
+        const superProto = anchorProto && Object.getPrototypeOf(anchorProto);
+        if (typeof RealAnchor === 'function' && typeof RealMouseEvent === 'function' && typeof superProto?.click === 'function' && typeof superProto?.dispatchEvent === 'function') {
+          const onMissedClick = (event) => {
+            if (!event.defaultPrevented) onLinkClick(event);
+          };
+          // Links whose click() or dispatchEvent() is running, so a call made during it leaves the outer call's listener in place.
+          const listening = new WeakSet();
+          const callHearingMissed = (anchor, bubbles, call) => {
+            if (!(anchor instanceof RealAnchor) || !anchor.hasAttribute('download') || (anchor.isConnected && bubbles) || listening.has(anchor)) {
+              return call();
+            }
+            listening.add(anchor);
+            anchor.addEventListener('click', onMissedClick);
+            try {
+              return call();
+            } finally {
+              listening.delete(anchor);
+              anchor.removeEventListener('click', onMissedClick);
+            }
+          };
+          anchorProto.click = function () {
+            return callHearingMissed(this, true, () => superProto.click.call(this));
+          };
+          anchorProto.dispatchEvent = function (event) {
+            const call = () => superProto.dispatchEvent.call(this, event);
+            return event instanceof RealMouseEvent && event.type === 'click' ? callHearingMissed(this, event.bubbles, call) : call();
+          };
+        }
+
+        const originalOpen = window.open;
+        window.open = function (url) {
+          realParent.postMessage({
+            type: "openExternal",
+            href: url,
+          }, "*");
+        };
+
+        window.addEventListener('error', (event) => {
+          realParent.postMessage({ type: 'console', message: 'Uncaught Error: ' + event.message }, '*');
+        });
+
+        // Last, so that if this throws, everything above is already set up. In its own function, so that its names stay local.
+        (() => {
+          function forwardConsole(e,l){const f=String,r=Reflect.apply;let i=0;const p=n=>i>3&&(typeof n=="function"||typeof n=="object"&&n!==null)?"[object Object]":n,u=n=>{try{return f(n??"")}catch{return"[object Object]"}},s=[["log",""],["error","Error: "],["warn","Warning: "]];for(const[n,y]of s){if(typeof e?.[n]!="function")continue;const d=e[n];e[n]=(...o)=>{let c=y;i+=1;try{for(let t=0;t<o.length;t+=1)o[t]=p(o[t]);r(d,e,o);for(let t=0;t<o.length;t+=1)c+=(t===0?"":" ")+u(o[t])}finally{i-=1}l(c)}}}
+          forwardConsole(window.console, (line) => realParent.postMessage({ type: 'console', message: line }, '*'));
+        })();
+      })();
+    </script>
+  `,G=j?`
+    <style id="claude-chart-theme">
+      :root {
+${(0,p.F)(j)}
+      }
+    </style>
+  `:"",z=d.includes("::-webkit-scrollbar")?"":R,$=C&&!d.includes("safe-area-inset-bottom")?'<style id="claude-safe-area">body{border-bottom:env(safe-area-inset-bottom,0px) solid transparent}</style>':"",H=/<head(\s[^>]*)?>/i,V=`${_}${z}${$}${G}`,Q=H.test(d)?d.replace(H,e=>`${e}${V}`):`${V}${d}`;Q=Q.replace(/<body(\s[^>]*)?>/i,e=>{let t=e.slice(5,-1);return`<body${t} id="artifacts-component-root-html">`});let[J,K]=(0,a.useState)(()=>({phase:"loading",current:{id:0,content:d,srcDoc:Q}})),Y=J;if(Y.current.content!==d){var X,Z,ee;let e,t=U.lines.length>0&&!("held"in Y);X=Y,Z=Q,ee=t?null:S,e={id:X.current.id+1,content:d,srcDoc:Z},Y=null===ee||"loading"===X.phase?{phase:"loading",current:e}:"preparing"===X.phase?{...X,current:e}:{phase:"preparing",held:X.current,current:e,deadline:ee},F({dropped:0,lines:[]})}else"held"in Y&&null===S&&(Y=m(Y,Y.held.id));Y!==J&&K(Y),function({frames:e,setFrames:t,heldRef:r}){let n="held"in e?e.held.id:null;(0,a.useLayoutEffect)(()=>{let e=r.current;if(null!==n&&e){e.contentWindow&&E.delete(e.contentWindow),e.blur();try{for(let t of e.contentDocument?.querySelectorAll("audio, video")??[])t.pause?.()}catch{}}},[n,r]),(0,a.useEffect)(()=>{if(!("held"in e))return;let r=()=>t(t=>m(t,e.held.id)),n=setTimeout(r,"revealing"===e.phase?200:e.deadline-performance.now());return document.addEventListener("visibilitychange",r),()=>{clearTimeout(n),document.removeEventListener("visibilitychange",r)}},[e,t])}({frames:Y,setFrames:K,heldRef:q});let et=Y.current.id;(0,a.useLayoutEffect)(()=>{let e,t,r=D.current;if(!r)return;let n=()=>K(e=>e.current.id!==et?e:"loading"===e.phase?{phase:"shown",current:e.current}:"preparing"===e.phase?{phase:"revealing",held:e.held,current:e.current}:e),a=0,o=null,s=0,l=performance.now(),i=()=>{h=0,cancelAnimationFrame(a),clearTimeout(e),t?.disconnect(),r.removeEventListener("load",m)},c=()=>{W(r.contentDocument)},d=()=>{i(),c(),r.addEventListener("load",c)},u=e=>{d(),n(),B(w(r,e)??s)},h=null,p=()=>{try{let e=r.contentDocument;if(e?.URL!=="about:srcdoc"||"loading"===e.readyState)return;null===h&&(h=2),r.contentWindow?.requestAnimationFrame(()=>{h&&(0==(h-=1)?n():p())})}catch{h=0}},f=()=>{if(null!==w(r))return void u();if(null===h&&p(),null!==o){if(2===(o+=1)&&n(),o>6)return void u()}else if(performance.now()-l>6e4)return void d();a=requestAnimationFrame(f)};function m(){if(null===o){if(s=performance.now(),o=0,e=setTimeout(u,200),function(e){try{if(PerformanceObserver.supportedEntryTypes.includes("paint"))return!1;let t=e.contentWindow?.__storageReadsOut,r=e.contentDocument,n=r?.body;if(0!==t||!r||!n)return!1;return n.getClientRects().length>0&&""!==n.innerText.trim()&&"loading"!==r.fonts.status}catch{return!1}}(r))return void u();try{let e=r.contentWindow?.PerformanceObserver;e&&(t=new e(e=>{let t=e.getEntries();t.some(b)&&u(t)})).observe({type:"paint",buffered:!0})}catch{t=void 0}}}return r.addEventListener("load",m),a=requestAnimationFrame(f),()=>{i(),r.removeEventListener("load",c)}},[et,B,W]);let er="held"in Y?Y.held:null,en="preparing"===Y.phase,ea=U.lines.length>0&&!er;return(0,t.jsxs)(h.ResizablePanelGroup,{direction:"vertical",className:"h-screen",children:[(0,t.jsx)(h.ResizablePanel,{defaultSize:ea?80:100,className:"grid grid-cols-1 grid-rows-1",children:(er?[er,Y.current]:[Y.current]).map(e=>(0,t.jsx)("iframe",{ref:e===er?q:N,className:(0,s.U)("col-start-1 row-start-1 h-full w-full",(e===er||en)&&"pointer-events-none",er&&e!==er?"bg-background transition-opacity ease-in-out will-change-[opacity] motion-reduce:transition-none":"transition-none"),style:er&&e!==er?{transitionDuration:"150ms",opacity:+!en}:void 0,inert:e===er||en,"aria-hidden":e===er||en||void 0,title:O.formatMessage(r.f.htmlFrameTitle),sandbox:"allow-scripts allow-same-origin",allow:"clipboard-write",srcDoc:e.srcDoc,onLoad:e===er?void 0:A},e.id))}),ea&&(0,t.jsxs)(t.Fragment,{children:[(0,t.jsx)(x,{}),(0,t.jsx)(h.ResizablePanel,{defaultSize:20,children:(0,t.jsxs)("div",{className:"h-full overflow-auto p-4",style:{scrollbarWidth:"thin",scrollbarColor:M,backgroundColor:"hsl(60 1.8% 22%)",backgroundImage:"linear-gradient(hsl(60 3.3% 17.8%), hsl(45 4.9% 16.1%))",...C&&{paddingBottom:"calc(1rem + env(safe-area-inset-bottom, 0px))",paddingLeft:"calc(1rem + env(safe-area-inset-left, 0px))",paddingRight:"calc(1rem + env(safe-area-inset-right, 0px))"}},children:[(0,t.jsxs)("div",{className:"mb-2 inline-flex items-center gap-2 rounded-lg border px-2 py-1",style:{borderColor:"hsl(50 5.9% 40%)",color:"hsl(47 8.4% 79%)"},children:[(0,t.jsx)(i.f,{size:12}),(0,t.jsx)("h2",{className:"gap-2 font-ui text-xs",children:(0,t.jsx)(u.Q,{message:r.f.consoleTitle})})]}),U.dropped>0&&(0,t.jsx)("div",{className:"mb-0.5 flex items-start gap-2 rounded-lg px-2 py-1",children:(0,t.jsx)("pre",{className:"flex-grow text-wrap font-mono text-sm",style:{color:v},children:(0,t.jsx)(u.Q,{message:r.f.consoleEarlierLinesDropped})})}),U.lines.map((e,r)=>{let n=null,a={},o={color:v};return e.startsWith("Error:")||e.startsWith("Uncaught Error:")?(n=(0,t.jsx)(c.f,{size:12,className:"mt-1 shrink-0 text-red-500"}),a={backgroundColor:"rgba(255, 0, 0, 0.1)"},o.color="hsl(5 69.4% 72.9%)"):e.startsWith("Warning:")&&(n=(0,t.jsx)(l.f,{size:12,className:"mt-1 shrink-0 text-yellow-500"}),a={backgroundColor:"rgba(255, 255, 0, 0.1)"},o.color="hsl(18 50.4% 47.5%)"),(0,t.jsxs)("div",{className:"mb-0.5 flex items-start gap-2 rounded-lg px-2 py-1",style:a,children:[(0,t.jsx)(t.Fragment,{children:n}),(0,t.jsx)("pre",{className:"flex-grow text-wrap font-mono text-sm",style:o,children:e})]},U.dropped+r)})]})})]})]})});T.displayName="UnsafeHtmlRenderer";let j=a.memo(T);e.s(["L",0,j,"G",0,function(e,t){return!!e&&t.nonce===e.nonce&&(e.resolve(t),!0)}],780934)},732446,e=>{let t=(0,e.i(428356).f)("CircleX",[["circle",{cx:"12",cy:"12",r:"10",key:"1mglay"}],["path",{d:"m15 9-6 6",key:"1uzhvr"}],["path",{d:"m9 9 6 6",key:"z0biqf"}]]);e.s(["f",0,t])},433979,e=>{let t=(0,e.i(428356).f)("SquareTerminal",[["path",{d:"m7 11 2-2-2-2",key:"1lz0vl"}],["path",{d:"M11 13h4",key:"1p7l4v"}],["rect",{width:"18",height:"18",x:"3",y:"3",rx:"2",ry:"2",key:"1m3agn"}]]);e.s(["f",0,t])},557936,e=>{let t=(0,e.i(428356).f)("TriangleAlert",[["path",{d:"m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3",key:"wmoenq"}],["path",{d:"M12 9v4",key:"juzpu7"}],["path",{d:"M12 17h.01",key:"p32p05"}]]);e.s(["f",0,t])}])})();
